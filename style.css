@@ -54,6 +54,7 @@ a :hover {
 
 .about-me h4 {
     margin-left: 130px;
+    margin-bottom: 2em;
 }
 
 .about-me img {
@@ -61,4 +62,9 @@ a :hover {
     height: 400px;
     border-radius: 50%;
     border: 5px solid #405b7c;
+}
+
+.projects h2,
+p {
+    margin-left: 130px;
 }
