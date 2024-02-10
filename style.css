@@ -68,3 +68,24 @@ a :hover {
 p {
     margin-left: 130px;
 }
+
+.skills h2 {
+    margin-left: 130px;
+    margin-bottom: 10px;
+    margin-top: 110px;
+}
+
+.skills p {
+    margin-bottom: 70px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sql {
+    width: 96px;
+    height: 96px;
+}
