@@ -3,12 +3,13 @@
 body {
     font-family: "Rubik", sans-serif;
     color: #405b7c;
+
 }
 
 nav h1 {
     text-align: center;
     margin-bottom: 2em;
-    font-size: 2.2em;
+    font-size: 2.5em;
     letter-spacing: 3px;
 }
 
@@ -21,15 +22,34 @@ nav h1 {
     margin-bottom: 110px;
 }
 
-a {
+nav a {
     text-decoration: none;
+    position: relative;
     color: #405b7c;
 
 }
 
-a :hover {
-    text-decoration: underline;
+nav a ::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    background-color: #405b7c;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
 }
+
+
+nav a :hover::before {
+    width: 100%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+
+
+}
+
 
 .about-me {
     display: flex;
@@ -76,7 +96,7 @@ p {
 }
 
 .skills p {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 }
 
 .icons {
@@ -85,7 +105,26 @@ p {
     justify-content: space-around;
 }
 
-.sql {
+.icons {
+    position: relative;
+}
+
+.icons img {
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+#sqlimg {
     width: 96px;
     height: 96px;
 }
