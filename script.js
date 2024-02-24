@@ -50,7 +50,6 @@ document.getElementById('contact').addEventListener('click', function () {
     return false;
 });
 
-
 document.getElementById('about').addEventListener('click', function () {
     var parts = document.querySelectorAll('.part');
 
@@ -64,3 +63,4 @@ document.getElementById('about').addEventListener('click', function () {
     return false;
 
 })
+
