@@ -6,11 +6,18 @@ body {
 
 }
 
+p {
+    font-size: 1.1em;
+}
+
+
+
 nav h1 {
     text-align: center;
     margin-bottom: 2em;
     font-size: 2.5em;
     letter-spacing: 3px;
+
 }
 
 .nav {
@@ -20,12 +27,17 @@ nav h1 {
     justify-content: space-evenly;
     font-size: 1.5em;
     margin-bottom: 110px;
+    background-color: #405b7c;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: web-kit-fit-availble;
+
 }
 
 nav a {
     text-decoration: none;
     position: relative;
-    color: #405b7c;
+    color: white;
 
 }
 
@@ -36,7 +48,7 @@ nav a ::before {
     height: 1px;
     bottom: 0;
     left: 50%;
-    background-color: #405b7c;
+    background-color: white;
     transition: width 0.3s ease, left 0.3s ease;
     transform: translateX(-50%);
 }
@@ -78,7 +90,7 @@ nav a :hover::before {
 }
 
 .about-me img {
-    width: 340px;
+    width: 320px;
     height: 400px;
     border-radius: 50%;
     border: 5px solid #405b7c;
@@ -115,20 +127,30 @@ p {
 
 .tooltip {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    color: #405b7c;
+    position: fixed;
+    background-color: #405b7c;
+    color: #f9f9f9;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     z-index: 1;
-    top: 100%;
+    top: 50%;
+    /* Position at 50% from the top */
     left: 50%;
-    transform: translateX(-50%);
-    background-color: #f9f9f9;
+    /* Position at 50% from the left */
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    max-height: 600px;
+    /* Adjust width if needed */
+    text-align: center;
+    /* Center the text */
     border: 1px solid #ccc;
-    padding: 10px;
     margin-top: 15px;
+}
+
+.tooltip strong {
+    font-weight: normal;
+    text-decoration: underline;
 }
 
 #sqlimg {

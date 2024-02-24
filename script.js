@@ -1,22 +1,32 @@
 
 
-document.querySelectorAll('.icons img').forEach(image => {
-    image.addEventListener('click', function () {
-        const tooltip = this.nextElementSibling;
-        const tooltips = document.querySelectorAll('.tooltip');
 
-        // Hide all tooltips except the one associated with the clicked image
-        tooltips.forEach(otherTooltip => {
-            if (otherTooltip !== tooltip) {
-                otherTooltip.style.display = 'none';
-            }
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all the tooltip elements
+    var tooltips = document.querySelectorAll(".tooltip");
+
+    // Add click event listener to each image
+    document.querySelectorAll(".icons img").forEach(function (img, index) {
+        img.addEventListener("click", function () {
+            // Hide all tooltips
+            tooltips.forEach(function (tooltip) {
+                tooltip.style.display = "none";
+            });
+
+            // Show the tooltip that corresponds to the clicked image
+            tooltips[index].style.display = "block";
         });
+    });
 
-        // Toggle the display of the clicked tooltip
-        tooltip.style.display = (tooltip.style.display === 'block') ? 'none' : 'block';
+    // Hide tooltip when clicked outside of it
+    document.addEventListener("click", function (event) {
+        if (!event.target.matches(".icons img")) {
+            tooltips.forEach(function (tooltip) {
+                tooltip.style.display = "none";
+            });
+        }
     });
 });
-
 
 document.getElementById('contact').addEventListener('click', function () {
     var divs = document.querySelectorAll('.part');
@@ -39,3 +49,6 @@ document.getElementById('contact').addEventListener('click', function () {
     // Prevent the default behavior of the button
     return false;
 });
+
+
+
