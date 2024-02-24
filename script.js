@@ -51,4 +51,16 @@ document.getElementById('contact').addEventListener('click', function () {
 });
 
 
+document.getElementById('about').addEventListener('click', function () {
+    var parts = document.querySelectorAll('.part');
 
+    if (parts[3].style.display = 'block') {
+        parts[0].style.display = 'flex';
+        parts[1].style.display = 'block';
+        parts[2].style.display = 'block';
+        parts[3].style.display = 'none';
+    }
+
+    return false;
+
+})
